@@ -1,0 +1,754 @@
+:root {
+    --primary-color: #83bafd; /* Blue from the logo */
+    --accent-color: #f47c28; /* Orange */
+    --accent-color-green: #3c9e58; /* Green */
+    --text-color: #333; /* Darker text */
+    --secondary-text-color: #666; /* Lighter text */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+header.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-small {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background 0.3s ease, color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+nav ul li a:hover {
+    background-color: #003d80;
+    border-radius: 5px;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+#home {
+    background: linear-gradient(rgba(44, 97, 162, 0.0), rgba(44, 97, 162, 0.7)), url('https://static.vecteezy.com/system/resources/previews/023/122/779/non_2x/modern-office-interior-with-furniture-and-daylight-workplace-and-lifestyle-concept-ai-generated-free-photo.jpg') no-repeat center center/cover;
+    color: white;
+    height: 110vh;
+}
+
+#about {
+    background-color: #f0f0f0;
+    height: 105vh;
+}
+
+#products {
+    background-color: #e0e0e0;
+    height: 110vh;
+}
+
+#contact {
+    background-color: #d0d0d0;
+    height: 72.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+#contact p{
+    color: #003d80;
+     
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.logo-big {
+    height: 100px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+
+
+.follow-us {
+    width: 300px;
+    height: 50%;
+    padding: 1em;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-form {
+    width: 300px;
+    height: 70%;
+    padding: 2em;
+    font-size: 0.8em;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    margin-top: 1em;
+    padding: 0.7em;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #003d80;
+}
+
+
+
+#map {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.box {
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#home a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    transition: background 0.3s ease, color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#home a:hover{
+    background-color: #002f60;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#home a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+
+#home a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns left and right elements at the bottom */
+    position: relative; /* Allows positioning adjustments */
+}
+
+.footer-contact, .footer-social {
+    font-size: 1.0em; /* Smaller text and icon size */
+    display: flex;
+    align-items: flex-end; /* Aligns the text/icons at the bottom */
+}
+
+
+.footer-contact {
+    margin-left: 20px; /* Spacing from the left */
+    color: black;
+}
+
+.footer-contact p {
+    margin: 0;
+    padding-right: 10px;
+}
+
+.footer-social {
+    margin-right: 20px; /* Spacing from the right */
+}
+
+.footer-social a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1.4em; /* Icon size */
+}
+
+.footer-social i {
+    transition: color 0.6s ease;
+}
+
+.footer-social a:hover i {
+    color: #f47c28; /* Hover effect for icons */
+}
+
+.footer-logo-container {
+    position: absolute; /* Positioned in the center, raised slightly */
+    top: -20px; /* Moves the logo slightly upwards */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-logo-container img{
+    border: 2px solid black;
+}
+
+.logo-big {
+    height: 100px;
+    border-radius: 20px;
+}
+
+
+/* Add this CSS for sticky links */
+.sticky-links {
+display: none; /* Hidden by default */
+position: fixed; /* Fixes position relative to the viewport */
+top: 60px; /* Adjust based on your header height */
+left: 0;
+width: 100%; /* Full width */
+background-color: var(--primary-color); /* Use your primary color */
+padding: 10px 0; /* Padding for better aesthetics */
+z-index: 999; /* Ensure it appears above other elements */
+text-align: center; /* Center align text */
+}
+
+.sticky-links nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+.sticky-links nav ul li {
+display: inline; /* Display links in a row */
+margin: 0 15px; /* Space between links */
+}
+
+.sticky-links nav ul li a {
+color: white; /* Text color */
+text-decoration: none; /* Remove underline */
+padding: 5px 10px; /* Padding for clickable area */
+transition: background 0.3s ease;
+}
+
+.sticky-links nav ul li a:hover {
+background-color: #003d80; /* Background on hover */
+border-radius: 5px; /* Rounded corners */
+}
+
+.about-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 55px;
+gap: 30px;
+
+}
+
+.about-photo.large img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+}
+.about-photo.large {
+display: flex;
+height: 35vh;
+width: 480px;
+justify-content: center;
+align-items: center;
+border: 1px solid black;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+border-radius: 20px;
+padding: 10px;
+
+}
+
+.about-photo.small{
+display: flex;
+height: 35vh;
+width: 480px;
+justify-content: center;
+align-items: center;
+border: 1px solid black;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+border-radius: 20px;
+padding: 10px;
+}
+
+.about-photo.small img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+padding-right: 50px;
+padding-left: 50px;
+}
+
+.about-bottom-photos {
+display: flex;
+width: 100%;
+gap: 30px;
+
+}
+
+.about-photo p {
+text-align: center;
+
+}
+.details{
+color: #0a63c2;
+padding-right: 25px;
+}
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+justify-items: center;
+}
+
+.product-box {
+margin: 20px; /* Adjust margin as needed */
+position: relative;
+overflow: hidden;
+border: 1px solid #000;
+border-radius: 20px; /* Adjust border radius as needed */
+transition: transform 0.3s ease;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+width: 350px; /* Adjust width as needed */
+height: 250px; /* Adjust height as needed */
+}
+
+.product-box:hover {
+transform: scale(1.1);
+}
+
+.product-box img {
+width: 100%;
+height: 100%;
+transition: transform 0.3s ease;
+}
+
+.product-box:hover img {
+transform: scale(1.1);
+}
+
+.product-details {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+padding: 10px;
+color: #fff;
+transition: opacity 0.3s ease;
+opacity: 0;
+}
+
+.product-box:hover .product-details {
+opacity: 1;
+}
+
+
+/* For Mobile Devices */
+/* For Mobile Devices */
+@media (max-width: 768px) {
+header {
+padding: 0.5em 0; /* Reduce header padding */
+}
+
+.logo-small {
+height: 30px; /* Smaller logo */
+}
+
+#home {
+height: 100vh; /* Adjust hero section height for mobile */
+padding: 1em; /* Add padding for better spacing */
+text-align: center; /* Center align text */
+}
+
+#home h1, #home h2, #home p {
+font-size: 1.5em; /* Adjust font size for smaller screens */
+}
+
+.product-grid {
+grid-template-columns: repeat(2, 1fr); /* Two products per row on tablets */
+gap: 10px;
+}
+
+#about h2, #products h2 {
+font-size: 2em; /* Adjust section headings */
+}
+
+#contact {
+height: auto; /* Allow contact section to adjust based on content */
+padding: 1em; /* Add padding */
+}
+
+.contact-content {
+flex-direction: column; /* Stack contact form and map vertically */
+width: 100%;
+align-items: center; /* Center align items */
+}
+
+#map {
+width: 50px; /* Full width map for mobile */
+height: 50%; /* Reduce map height */
+}
+
+footer {
+flex-direction: column; /* Stack footer elements */
+text-align: center; /* Center align text */
+}
+
+.footer-contact, .footer-social {
+margin: 10px 0; /* Add spacing between footer elements */
+}
+
+.about-container {
+padding: 20px; /* Reduce padding for smaller screens */
+}
+
+.about-bottom-photos {
+flex-direction: column; /* Stack photos vertically */
+align-items: center; /* Center align */
+}
+
+.about-photo.large, .about-photo.small {
+width: 75%; /* Full width for all photos */
+height: auto; /* Adjust height */
+margin: 0px; /* Margin between photos */
+
+}
+
+.product-box {
+width: 90%; /* Full width for products */
+height: auto;
+max-width: 350px; /* Maximum width */
+margin: 10px auto; /* Center alignment */
+}
+
+.product-box img {
+width: 100%; /* Responsive image */
+height: auto; /* Maintain aspect ratio */
+}
+
+.footer-logo-container img {
+height: 60px; /* Smaller footer logo */
+}
+}
+
+nav {
+display: flex;
+justify-content: space-between; /* Align logo and links */
+align-items: center; /* Center items vertically */
+}
+
+.nav-links {
+display: flex; /* Default display for desktop */
+list-style: none; /* Remove bullets */
+}
+
+.nav-links li {
+margin: 0 15px; /* Space between links */
+}
+
+.menu-toggle {
+display: none; /* Hide on desktop */
+flex-direction: column; /* Stack dots vertically */
+background: none;
+border: none;
+cursor: pointer;
+}
+
+.dot {
+width: 8px; /* Dot width */
+height: 8px; /* Dot height */
+background: black; /* Dot color */
+border-radius: 50%; /* Make dots circular */
+margin: 2px 0; /* Space between dots */
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+.nav-links {
+display: none; /* Hide links by default */
+flex-direction: column; /* Stack links vertically */
+width: 90%; /* Full width */
+position: absolute; /* Position relative to nav */
+top: 50px; /* Adjust based on your layout */
+left: 0; /* Align to left */
+background: transparent; /* Background for links */
+z-index: 10; /* Ensure it appears above other content */
+}
+
+.menu-toggle {
+display: flex; /* Show the menu toggle on mobile */
+}
+
+.sticky-links{
+display: none;
+}
+
+.nav-links.active {
+display: flex; /* Show links when active */
+}
+
+nav ul li {
+padding: 10px; /* Space around links */
+text-align: center; /* Center text */
+}
+
+.details{
+color: #0a63c2;
+padding-right: 40px;
+}
+
+}
+
+.map-container {
+width: 100%; /* Full width of the container */
+height: auto; /* Automatic height */
+max-height: 450px; /* Maximum height for desktop */
+}
+
+.mobile-map-container {
+display: none; /* Hidden by default */
+width: 100%; /* Full width of the container */
+height: 100vh; /* Full viewport height */
+}
+
+.mobile-map-container iframe {
+width: 100%; /* Full width of the iframe */
+height: 100%; /* Full height of the iframe */
+border: 0; /* No border */
+}
+
+@media (max-width: 768px) {
+.map-container {
+display: none; /* Hide desktop map on mobile */
+}
+
+.mobile-map-container {
+display: block; /* Show mobile map on mobile */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #83bafd; /* Primary Color */
+    color: white;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.logo-small {
+    height: 40px;
+}
+
+.menu-toggle {
+    display: flex; /* Show on mobile */
+    flex-direction: column; /* Stack dots vertically */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dot {
+    height: 4px;
+    width: 30px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 60px; /* Below the header */
+    right: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-links a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+.nav-links a:hover {
+    background-color: #f47c28; /* Hover color */
+}
+
+.sticky-links {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+.section {
+    padding: 60px 1em 60px; /* Add padding to avoid header overlap */
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+}
