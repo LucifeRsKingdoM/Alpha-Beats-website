@@ -8,7 +8,7 @@
     <title>ALPHA BEATS</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
             <div class="logo-small">
                 <img src="logo.jpeg" alt="ALPHA BEATS Logo" class="logo-small">
@@ -20,11 +20,6 @@
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </button>
         </nav>
         
     </header>
@@ -129,6 +124,10 @@
                         <button type="submit">Get Quation</button>
                     </form>
                 </div>
+
+                <div class="kali">
+                    <h1>-----</h1>
+                </div>
         
                 <!-- Existing Map Section (Desktop) -->
             <div id="map" class="map-container box">
@@ -211,10 +210,43 @@
         });
 
 
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active'); // Toggle active class
+        let lastY = 0; // Last touch position
+        const header = document.getElementById('header');
+
+        // Listen for touch events
+        window.addEventListener('touchstart', (event) => {
+            lastY = event.touches[0].clientY; // Store the starting Y position of the touch
         });
+
+        window.addEventListener('touchmove', (event) => {
+            const currentY = event.touches[0].clientY;
+
+            // Determine the direction of the swipe
+            if (currentY < lastY) {
+                // Swiping up, hide the header
+                header.style.transform = 'translateY(-100%)'; // Move header up
+            } else if (currentY > lastY) {
+                // Swiping down, show the header
+                header.style.transform = 'translateY(0)'; // Move header down
+            }
+
+            lastY = currentY; // Update last Y position
+        });
+
+        // Add a listener to hide the header when scrolling
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                // User is scrolling down, hide the header
+                header.style.transform = 'translateY(-100%)'; // Move header up
+            } else {
+                // User is scrolling up, show the header
+                header.style.transform = 'translateY(0)'; // Move header down
+            }
+            lastScrollY = window.scrollY; // Update last scroll position
+        });
+
 
 
     </script>
