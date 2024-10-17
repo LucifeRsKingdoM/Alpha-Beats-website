@@ -21,15 +21,8 @@ header {
     background-color: var(--primary-color);
     color: white;
     padding: 1em 0;
-    position: fixed;
     width: 100%;
-    z-index: 1000;
     transition: opacity 0.3s;
-}
-
-header.hidden {
-    opacity: 0;
-    pointer-events: none;
 }
 
 nav {
@@ -322,433 +315,388 @@ footer {
 
 /* Add this CSS for sticky links */
 .sticky-links {
-display: none; /* Hidden by default */
-position: fixed; /* Fixes position relative to the viewport */
-top: 60px; /* Adjust based on your header height */
-left: 0;
-width: 100%; /* Full width */
-background-color: var(--primary-color); /* Use your primary color */
-padding: 10px 0; /* Padding for better aesthetics */
-z-index: 999; /* Ensure it appears above other elements */
-text-align: center; /* Center align text */
-}
-
-.sticky-links nav ul {
-padding: 0;
-margin: 0;
-list-style: none;
-}
-
-.sticky-links nav ul li {
-display: inline; /* Display links in a row */
-margin: 0 15px; /* Space between links */
-}
-
-.sticky-links nav ul li a {
-color: white; /* Text color */
-text-decoration: none; /* Remove underline */
-padding: 5px 10px; /* Padding for clickable area */
-transition: background 0.3s ease;
-}
-
-.sticky-links nav ul li a:hover {
-background-color: #003d80; /* Background on hover */
-border-radius: 5px; /* Rounded corners */
-}
-
-.about-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 55px;
-gap: 30px;
-
-}
-
-.about-photo.large img {
-width: 200px;
-height: 200px;
-border-radius: 50%;
-}
-.about-photo.large {
-display: flex;
-height: 35vh;
-width: 480px;
-justify-content: center;
-align-items: center;
-border: 1px solid black;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-border-radius: 20px;
-padding: 10px;
-
-}
-
-.about-photo.small{
-display: flex;
-height: 35vh;
-width: 480px;
-justify-content: center;
-align-items: center;
-border: 1px solid black;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-border-radius: 20px;
-padding: 10px;
-}
-
-.about-photo.small img {
-width: 200px;
-height: 200px;
-border-radius: 50%;
-padding-right: 50px;
-padding-left: 50px;
-}
-
-.about-bottom-photos {
-display: flex;
-width: 100%;
-gap: 30px;
-
-}
-
-.about-photo p {
-text-align: center;
-
-}
-.details{
-color: #0a63c2;
-padding-right: 25px;
-}
-
-.product-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-justify-items: center;
-}
-
-.product-box {
-margin: 20px; /* Adjust margin as needed */
-position: relative;
-overflow: hidden;
-border: 1px solid #000;
-border-radius: 20px; /* Adjust border radius as needed */
-transition: transform 0.3s ease;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-width: 350px; /* Adjust width as needed */
-height: 250px; /* Adjust height as needed */
-}
-
-.product-box:hover {
-transform: scale(1.1);
-}
-
-.product-box img {
-width: 100%;
-height: 100%;
-transition: transform 0.3s ease;
-}
-
-.product-box:hover img {
-transform: scale(1.1);
-}
-
-.product-details {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.7);
-padding: 10px;
-color: #fff;
-transition: opacity 0.3s ease;
-opacity: 0;
-}
-
-.product-box:hover .product-details {
-opacity: 1;
-}
-
-
-/* For Mobile Devices */
-/* For Mobile Devices */
-@media (max-width: 768px) {
-header {
-padding: 0.5em 0; /* Reduce header padding */
-}
-
-.logo-small {
-height: 30px; /* Smaller logo */
-}
-
-#home {
-height: 100vh; /* Adjust hero section height for mobile */
-padding: 1em; /* Add padding for better spacing */
-text-align: center; /* Center align text */
-}
-
-#home h1, #home h2, #home p {
-font-size: 1.5em; /* Adjust font size for smaller screens */
-}
-
-.product-grid {
-grid-template-columns: repeat(2, 1fr); /* Two products per row on tablets */
-gap: 10px;
-}
-
-#about h2, #products h2 {
-font-size: 2em; /* Adjust section headings */
-}
-
-#contact {
-height: auto; /* Allow contact section to adjust based on content */
-padding: 1em; /* Add padding */
-}
-
-.contact-content {
-flex-direction: column; /* Stack contact form and map vertically */
-width: 100%;
-align-items: center; /* Center align items */
-}
-
-#map {
-width: 50px; /* Full width map for mobile */
-height: 50%; /* Reduce map height */
-}
-
-footer {
-flex-direction: column; /* Stack footer elements */
-text-align: center; /* Center align text */
-}
-
-.footer-contact, .footer-social {
-margin: 10px 0; /* Add spacing between footer elements */
-}
-
-.about-container {
-padding: 20px; /* Reduce padding for smaller screens */
-}
-
-.about-bottom-photos {
-flex-direction: column; /* Stack photos vertically */
-align-items: center; /* Center align */
-}
-
-.about-photo.large, .about-photo.small {
-width: 75%; /* Full width for all photos */
-height: auto; /* Adjust height */
-margin: 0px; /* Margin between photos */
-
-}
-
-.product-box {
-width: 90%; /* Full width for products */
-height: auto;
-max-width: 350px; /* Maximum width */
-margin: 10px auto; /* Center alignment */
-}
-
-.product-box img {
-width: 100%; /* Responsive image */
-height: auto; /* Maintain aspect ratio */
-}
-
-.footer-logo-container img {
-height: 60px; /* Smaller footer logo */
-}
-}
-
-nav {
-display: flex;
-justify-content: space-between; /* Align logo and links */
-align-items: center; /* Center items vertically */
-}
-
-.nav-links {
-display: flex; /* Default display for desktop */
-list-style: none; /* Remove bullets */
-}
-
-.nav-links li {
-margin: 0 15px; /* Space between links */
-}
-
-.menu-toggle {
-display: none; /* Hide on desktop */
-flex-direction: column; /* Stack dots vertically */
-background: none;
-border: none;
-cursor: pointer;
-}
-
-.dot {
-width: 8px; /* Dot width */
-height: 8px; /* Dot height */
-background: black; /* Dot color */
-border-radius: 50%; /* Make dots circular */
-margin: 2px 0; /* Space between dots */
-}
-
-/* Media query for mobile */
-@media (max-width: 768px) {
-.nav-links {
-display: none; /* Hide links by default */
-flex-direction: column; /* Stack links vertically */
-width: 90%; /* Full width */
-position: absolute; /* Position relative to nav */
-top: 50px; /* Adjust based on your layout */
-left: 0; /* Align to left */
-background: transparent; /* Background for links */
-z-index: 10; /* Ensure it appears above other content */
-}
-
-.menu-toggle {
-display: flex; /* Show the menu toggle on mobile */
-}
-
-.sticky-links{
-display: none;
-}
-
-.nav-links.active {
-display: flex; /* Show links when active */
-}
-
-nav ul li {
-padding: 10px; /* Space around links */
-text-align: center; /* Center text */
-}
-
-.details{
-color: #0a63c2;
-padding-right: 40px;
-}
-
-}
-
-.map-container {
-width: 100%; /* Full width of the container */
-height: auto; /* Automatic height */
-max-height: 450px; /* Maximum height for desktop */
-}
-
-.mobile-map-container {
-display: none; /* Hidden by default */
-width: 100%; /* Full width of the container */
-height: 100vh; /* Full viewport height */
-}
-
-.mobile-map-container iframe {
-width: 100%; /* Full width of the iframe */
-height: 100%; /* Full height of the iframe */
-border: 0; /* No border */
-}
-
-@media (max-width: 768px) {
-.map-container {
-display: none; /* Hide desktop map on mobile */
-}
-
-.mobile-map-container {
-display: block; /* Show mobile map on mobile */
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-}
-
-header {
-    background-color: #83bafd; /* Primary Color */
-    color: white;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1em;
-}
-
-.logo-small {
-    height: 40px;
-}
-
-.menu-toggle {
-    display: flex; /* Show on mobile */
-    flex-direction: column; /* Stack dots vertically */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.dot {
-    height: 4px;
-    width: 30px;
-    background-color: white;
-    margin: 3px 0;
-}
-
-.nav-links {
     display: none; /* Hidden by default */
-    flex-direction: column; /* Stack links vertically */
-    position: absolute;
-    top: 60px; /* Below the header */
-    right: 0;
-    background-color: var(--primary-color);
-    width: 100%;
-    z-index: 999;
-}
+    position: fixed; /* Fixes position relative to the viewport */
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: var(--primary-color); /* Use your primary color */
+    padding: 10px 0; /* Padding for better aesthetics */
+    z-index: 999; /* Ensure it appears above other elements */
+    text-align: center; /* Center align text */
+    }
 
-.nav-links a {
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    text-align: left;
-}
+    .sticky-links nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    }
 
-.nav-links a:hover {
-    background-color: #f47c28; /* Hover color */
-}
+    .sticky-links nav ul li {
+    display: inline; /* Display links in a row */
+    margin: 0 15px; /* Space between links */
+    }
 
-.sticky-links {
+    .sticky-links nav ul li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for clickable area */
+    transition: background 0.3s ease;
+    }
+
+    .sticky-links nav ul li a:hover {
+    background-color: #003d80; /* Background on hover */
+    border-radius: 5px; /* Rounded corners */
+    }
+
+    .about-container {
     display: flex;
-    justify-content: space-around;
-    background-color: #f0f0f0;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 55px;
+    gap: 30px;
+
+    }
+
+    .about-photo.large img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    }
+    .about-photo.large {
+    display: flex;
+    height: 35vh;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+
+    }
+
+    .about-photo.small{
+    display: flex;
+    height: 35vh;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+    }
+
+    .about-photo.small img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-right: 50px;
+    padding-left: 50px;
+    }
+
+    .about-bottom-photos {
+    display: flex;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-}
+    gap: 30px;
 
-.sticky-links a {
-    color: #333;
-    text-decoration: none;
-}
+    }
 
-.section {
-    padding: 60px 1em 60px; /* Add padding to avoid header overlap */
+    .about-photo p {
     text-align: center;
-}
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    }
+    .details{
+    color: #0a63c2;
+    padding-right: 25px;
+    }
+
+    .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    justify-items: center;
+    }
+
+    .product-box {
+    margin: 20px; /* Adjust margin as needed */
     position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 20px; /* Adjust border radius as needed */
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 350px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+    }
+
+    .product-box:hover {
+    transform: scale(1.1);
+    }
+
+    .product-box img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    }
+
+    .product-box:hover img {
+    transform: scale(1.1);
+    }
+
+    .product-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    }
+
+    .product-box:hover .product-details {
+    opacity: 1;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between; /* Align logo and links */
+        align-items: center; /* Center items vertically */
+        }
+    
+        .nav-links {
+        display: flex; /* Default display for desktop */
+        list-style: none; /* Remove bullets */
+        }
+    
+        .nav-links li {
+        margin: 0 15px; /* Space between links */
+        }
+    
+    
+        .dot {
+        width: 8px; /* Dot width */
+        height: 8px; /* Dot height */
+        background: black; /* Dot color */
+        border-radius: 50%; /* Make dots circular */
+        margin: 2px 0; /* Space between dots */
+        }
+    
+        .map-container {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Automatic height */
+        max-height: 450px; /* Maximum height for desktop */
+        }
+    
+        .mobile-map-container {
+            padding: 0;
+            margin: 0;
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width of the container */
+            height: 50vh; /* Full viewport height */
+            
+        }
+    
+        .mobile-map-container iframe {
+            width: 100%; /* Full width of the iframe */
+            height: 100%; /* Full height of the iframe */
+            border: 0; /* No border */
+        }
+
+        .kali h1{
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+
+    /* For Mobile Devices */
+    /* For Mobile Devices */
+    @media (max-width: 768px) {
+
+        html, body {
+            width: 100%; /* Set to full width */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+        
+        /* Ensure that sections take full width */
+        .section {
+            width: 100%;
+        }
+        
+        /* For any specific elements that might cause overflow */
+        .product-grid, .about-container, .contact-content, .footer-logo-container {
+            max-width: 100%; /* Prevent elements from exceeding full width */
+            box-sizing: border-box; /* Include padding and border in the element's total width */
+        }
+        .kali h1{
+            display:block;
+        }
+    
+
+    .logo-small {
+    height: 30px; /* Smaller logo */
+    }
+
+    #home {
+    height: 100vh; /* Adjust hero section height for mobile */
+    padding: 1em; /* Add padding for better spacing */
+    text-align: center; /* Center align text */
+    }
+
+    #home h1, #home h2, #home p {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two products per row on tablets */
+    gap: 10px;
+    }
+
+    #about{
+        width: auto;
+        height: 100vh; /* Adjust hero section height for mobile */
+        padding: 1em; /* Add padding for better spacing */
+        text-align: center; /* Center align text */
+    }
+
+    #about h2, #products h2 {
+    font-size: 2em; /* Adjust section headings */
+    }
+
+    #contact {
+    height: auto; /* Allow contact section to adjust based on content */
+    }
+
+    .contact-content {
+        flex-direction: column; /* Stack contact form and map vertically */
+        width: 100%;
+        align-items: center; /* Center align items */
+        padding: 20px;
+    }
+
+    footer {
+    flex-direction: column; /* Stack footer elements */
+    text-align: center; /* Center align text */
+    }
+
+    .footer-contact, .footer-social {
+    margin: 15px; /* Add spacing between footer elements */
+    }
+
+    .about-container {
+    padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .about-bottom-photos {
+    flex-direction: column; /* Stack photos vertically */
+    align-items: center; /* Center align */
+    }
+
+    .about-photo.large, .about-photo.small {
+    width: 75%; /* Full width for all photos */
+    height: auto; /* Adjust height */
+    margin: 0px; /* Margin between photos */
+
+    }
+
+    .product-box {
+    width: 90%; /* Full width for products */
+    height: auto;
+    max-width: 350px; /* Maximum width */
+    margin: 10px auto; /* Center alignment */
+    }
+
+    .product-box img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    }
+
+    .footer-logo-container{
+        padding-right: 300px;
+    }
+
+    .footer-logo-container img {
+    height: 60px; /* Smaller footer logo */
+    
+    }
 }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
+    @media (max-width: 768px) {
+    .map-container {
+    display: none; /* Hide desktop map on mobile */
+    }
 
+    .mobile-map-container {
+    display: block; /* Show mobile map on mobile */
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color); /* Your primary color */
+        transition: transform 0.3s ease; /* Smooth transition for the header */
+        z-index: 1000;
+        will-change: transform; /* Optimize for performance */
+    }
+
+
+    .logo-small {
+        height: 40px;
+        
+    }
+
+
+    footer {
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .details{
+        color: #0a63c2;
+        padding-right: 40px;
+        }
+    .nav-links{
+        display: none;
+    }
+    .box contact-form{
+        padding: 50px;
+        height: 100px;
+        width: 100%;
+    }
+
+    .box {
+        width: 85%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 }
+    
