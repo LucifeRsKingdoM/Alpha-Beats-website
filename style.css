@@ -22,7 +22,7 @@ header {
     color: white;
     padding: 1em 0;
     width: 100%;
-    transition: opacity 0.3s;
+    transition: opacity 0.6s;
 }
 
 nav {
@@ -108,7 +108,7 @@ nav ul li a:hover::before {
 #home {
     background: linear-gradient(rgba(44, 97, 162, 0.0), rgba(44, 97, 162, 0.7)), url('https://static.vecteezy.com/system/resources/previews/023/122/779/non_2x/modern-office-interior-with-furniture-and-daylight-workplace-and-lifestyle-concept-ai-generated-free-photo.jpg') no-repeat center center/cover;
     color: white;
-    height: 110vh;
+    height: 100vh;
 }
 
 #about {
@@ -130,10 +130,7 @@ nav ul li a:hover::before {
     text-align: center;
     padding: 0;
 }
-#contact p{
-    color: #003d80;
-     
-}
+
 
 .footer-logo-container {
     display: flex;
@@ -248,6 +245,26 @@ nav ul li a:hover::before {
 #home a:hover::before {
     width: 100%;
     left: 0;
+}
+
+#home h4{
+    font-family: "Agdasima", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 0px;
+    color: #0b325c;
+    background-color: #666;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+#home h1{
+    font-family: "Agdasima", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 90px;
 }
 
 footer {
@@ -392,7 +409,7 @@ footer {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    padding-right: 50px;
+    padding-right: 10px;
     padding-left: 50px;
     }
 
@@ -408,8 +425,25 @@ footer {
 
     }
     .details{
-    color: #0a63c2;
-    padding-right: 25px;
+    color: #000000;
+    padding-right: 10px;
+    }
+
+    .details1{
+        color: #000000;
+        
+    }
+
+    .details1 h2{
+        color: #000000;
+    }
+
+    .details b{
+        color: #0a63c2;
+    }
+
+    .details1 b{
+        color: #0a63c2;
     }
 
     .product-grid {
@@ -555,23 +589,34 @@ footer {
     }
 
     #home h1, #home h2, #home p {
-    font-size: 1.5em; /* Adjust font size for smaller screens */
+        font-family: "Agdasima", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    #home h4{
+        font-family: "Agdasima", sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        font-style: normal;
+        padding-bottom: 0px;
+        color: #0b325c;
+        background-color: #666;
+        border-radius: 50px;
+        padding: 10px;
+    }
+    
+    #home h1{
+        font-family: "Agdasima", sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        font-style: normal;
+        padding-bottom: 90px;
     }
 
     .product-grid {
     grid-template-columns: repeat(2, 1fr); /* Two products per row on tablets */
     gap: 10px;
-    }
-
-    #about{
-        width: auto;
-        height: 100vh; /* Adjust hero section height for mobile */
-        padding: 1em; /* Add padding for better spacing */
-        text-align: center; /* Center align text */
-    }
-
-    #about h2, #products h2 {
-    font-size: 2em; /* Adjust section headings */
     }
 
     #contact {
@@ -594,20 +639,70 @@ footer {
     margin: 15px; /* Add spacing between footer elements */
     }
 
+    #about{
+        width: auto;
+        height: 130vh; /* Adjust hero section height for mobile */
+        text-align: center; /* Center align text */
+    }
+
+    #products h2 {
+        font-size: 2.5em; /* Adjust section headings */
+    }
+
     .about-container {
-    padding: 20px; /* Reduce padding for smaller screens */
+        padding: 0px; /* Reduce padding for smaller screens */
     }
 
     .about-bottom-photos {
-    flex-direction: column; /* Stack photos vertically */
-    align-items: center; /* Center align */
+        flex-direction: column; /* Stack photos vertically */
+        align-items: center; /* Center align */
     }
 
     .about-photo.large, .about-photo.small {
-    width: 75%; /* Full width for all photos */
-    height: auto; /* Adjust height */
-    margin: 0px; /* Margin between photos */
+        width: 85%; /* Full width for all photos */
+        height: auto; /* Adjust height */
+        margin: 0px; /* Margin between photos */
+        padding: 0px;
+    }
 
+    .about-photo.small{
+        width: 85%; /* Full width for all photos */
+        height: 300px; /* Adjust height */
+        margin: 0px; /* Margin between photos */
+    }
+
+    .about-photo.small img{
+        width: 150px;
+        height: 150px;
+        padding: 0px;
+    }
+
+    .about-photo.large img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .details1 h3 b{
+        color: #0a63c2;
+    }
+
+    .details h3 b{
+        color: #0a63c2;
+    }
+
+    .details1 h2{
+        color: #000000;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .details h2{
+        color: #000;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .details{
+        color: #000000;
+        padding-right: 0px;
     }
 
     .product-box {
@@ -680,10 +775,7 @@ footer {
         margin: 0 10px;
     }
 
-    .details{
-        color: #0a63c2;
-        padding-right: 40px;
-        }
+    
     .nav-links{
         display: none;
     }
