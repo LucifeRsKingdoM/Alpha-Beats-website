@@ -575,6 +575,7 @@ footer {
         }
         .kali h1{
             display:block;
+            color: transparent;
         }
     
 
@@ -647,7 +648,7 @@ footer {
 
     #about{
         width: auto;
-        height: 130vh; /* Adjust hero section height for mobile */
+        height: 140vh; /* Adjust hero section height for mobile */
         text-align: center; /* Center align text */
     }
 
