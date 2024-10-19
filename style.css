@@ -614,6 +614,12 @@ footer {
         padding-bottom: 90px;
     }
 
+    #home a {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 0.5em 0.5em;
+    }
+
     .product-grid {
     grid-template-columns: repeat(2, 1fr); /* Two products per row on tablets */
     gap: 10px;
